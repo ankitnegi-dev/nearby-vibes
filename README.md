@@ -11,7 +11,7 @@
 
 ## 🎥 Demo
 
-![App Screenshot](./screenshots/demo.png)
+![App Screenshot](./screenshots/home.png)
 
 > Pick a mood → Allow location → See real nearby places on an interactive map
 
