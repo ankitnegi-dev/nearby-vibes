@@ -1,0 +1,26 @@
+.city-search { width:100%; max-width:480px; margin-top:12px; }
+.city-btn { width:100%; padding:11px; border-radius:14px; border:1.5px dashed #2A2A35; background:transparent; color:#7A7A8C; font-size:14px; font-weight:600; cursor:pointer; transition:all 0.15s; font-family:'DM Sans',sans-serif; }
+.city-btn:hover { border-color:#7C6AF7; color:#7C6AF7; }
+.city-search.light .city-btn { border-color:#D0D0E0; color:#9090A0; }
+.city-search.light .city-btn:hover { border-color:#7C6AF7; color:#7C6AF7; }
+
+.city-wrap { position:relative; }
+.city-input-row { display:flex; align-items:center; gap:8px; background:#1E1E24; border:1.5px solid #7C6AF7; border-radius:14px; padding:10px 14px; }
+.city-search.light .city-input-row { background:#F0F0F8; }
+.city-input { flex:1; background:transparent; border:none; outline:none; color:#F2F2F4; font-size:14px; font-family:'DM Sans',sans-serif; }
+.city-search.light .city-input { color:#18181B; }
+.city-input::placeholder { color:#7A7A8C; }
+.city-spin { color:#7C6AF7; font-size:18px; animation:spin 1s linear infinite; }
+@keyframes spin { to { transform:rotate(360deg); } }
+.city-close { background:none; border:none; color:#7A7A8C; cursor:pointer; font-size:16px; }
+
+.city-results { position:absolute; top:calc(100% + 6px); left:0; right:0; background:#1E1E24; border:1.5px solid #2A2A35; border-radius:14px; overflow:hidden; z-index:200; box-shadow:0 8px 24px rgba(0,0,0,0.4); }
+.city-search.light .city-results { background:#FFFFFF; border-color:#E0E0F0; }
+.city-result { padding:12px 16px; cursor:pointer; border-bottom:1px solid #2A2A35; transition:background 0.15s; }
+.city-result:last-child { border-bottom:none; }
+.city-result:hover { background:#2A2A35; }
+.city-search.light .city-result { border-color:#F0F0F8; }
+.city-search.light .city-result:hover { background:#F0F0F8; }
+.city-result-name { display:block; font-weight:700; font-size:14px; color:#F2F2F4; }
+.city-search.light .city-result-name { color:#18181B; }
+.city-result-full { font-size:11px; color:#7A7A8C; margin-top:2px; display:block; }

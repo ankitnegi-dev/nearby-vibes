@@ -1,0 +1,24 @@
+.place-card{display:flex;gap:12px;align-items:flex-start;padding:13px 12px;border-radius:14px;border:1.5px solid transparent;cursor:pointer;transition:all 0.18s;margin-bottom:8px;background:#1E1E24;}
+.place-card.light{background:#F4F4FC;}
+.place-card:hover{border-color:#2A2A35;}
+.place-card.light:hover{border-color:#D0D0E8;}
+.place-card.selected{border-color:var(--accent);background:#16161A;box-shadow:0 4px 20px color-mix(in srgb,var(--accent) 20%,transparent);}
+.place-card.light.selected{background:#EEEEF8;}
+.place-num{width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Syne',sans-serif;font-weight:800;font-size:13px;flex-shrink:0;background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent);}
+.place-main{flex:1;min-width:0;}
+.place-name{font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#F2F2F4;}
+.place-card.light .place-name{color:#18181B;}
+.place-local{font-size:12px;color:#00C2FF;margin-top:1px;font-style:italic;}
+.place-type{font-size:11px;color:#7A7A8C;margin-top:2px;text-transform:capitalize;}
+.place-stars{font-size:12px;color:#F5A623;margin-top:5px;}
+.place-stars span{color:#7A7A8C;font-size:11px;}
+.place-actions{display:flex;gap:6px;margin-top:7px;}
+.action-btn{background:transparent;border:1px solid #2A2A35;border-radius:8px;padding:3px 8px;font-size:13px;cursor:pointer;transition:all 0.15s;color:#7A7A8C;}
+.place-card.light .action-btn{border-color:#D0D0E8;}
+.action-btn:hover{border-color:var(--accent);color:var(--accent);}
+.action-btn.fav-btn.active{color:#F5A623;border-color:#F5A623;}
+.place-meta{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex-shrink:0;}
+.place-dist{font-family:'Syne',sans-serif;font-weight:700;font-size:13px;color:var(--accent);}
+.open-badge{font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;}
+.open-badge.open{background:#2DC87A20;color:#2DC87A;}
+.open-badge.closed{background:#F2588220;color:#F25882;}
