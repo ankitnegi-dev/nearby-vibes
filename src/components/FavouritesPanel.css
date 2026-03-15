@@ -1,0 +1,26 @@
+.favs-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.6); z-index:2000; display:flex; align-items:flex-end; justify-content:center; backdrop-filter:blur(4px); }
+.favs-panel { background:#16161A; border:1.5px solid #2A2A35; border-radius:24px 24px 0 0; width:100%; max-width:500px; max-height:80vh; overflow-y:auto; padding:20px; }
+.favs-overlay.light .favs-panel { background:#FFFFFF; border-color:#E0E0F0; }
+.favs-panel::-webkit-scrollbar { width:4px; }
+.favs-panel::-webkit-scrollbar-thumb { background:#2A2A35; border-radius:4px; }
+.favs-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; }
+.favs-title { font-family:'Syne',sans-serif; font-weight:800; font-size:20px; color:#F2F2F4; }
+.favs-overlay.light .favs-title { color:#18181B; }
+.favs-close { background:none; border:none; color:#7A7A8C; cursor:pointer; font-size:20px; }
+.favs-empty { text-align:center; padding:40px 20px; color:#7A7A8C; }
+.favs-empty p { margin-top:12px; font-size:14px; line-height:1.6; }
+.favs-list { display:flex; flex-direction:column; gap:10px; }
+.fav-card { display:flex; align-items:center; gap:12px; background:#1E1E24; border-radius:14px; padding:14px; cursor:pointer; transition:all 0.15s; border:1.5px solid transparent; }
+.favs-overlay.light .fav-card { background:#F4F4FC; }
+.fav-card:hover { border-color:#7C6AF7; }
+.fav-main { flex:1; min-width:0; }
+.fav-name { font-weight:700; font-size:14px; color:#F2F2F4; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.favs-overlay.light .fav-name { color:#18181B; }
+.fav-type { font-size:11px; color:#7A7A8C; margin-top:2px; text-transform:capitalize; }
+.fav-stars { font-size:12px; color:#F5A623; margin-top:4px; }
+.fav-stars span { color:#7A7A8C; font-size:11px; }
+.fav-meta { display:flex; gap:8px; margin-top:5px; font-size:11px; color:#7A7A8C; flex-wrap:wrap; align-items:center; }
+.fav-meta .open { color:#2DC87A; }
+.fav-meta .closed { color:#F25882; }
+.fav-remove { background:none; border:none; cursor:pointer; font-size:18px; flex-shrink:0; opacity:0.6; transition:opacity 0.15s; }
+.fav-remove:hover { opacity:1; }

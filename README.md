@@ -1,70 +1,250 @@
-# Getting Started with Create React App
+# 📍 Nearby Vibes — Smart Place Recommender
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> A location-based place recommendation app built with React, Leaflet.js and OpenStreetMap's Overpass API. Pick a mood → get real nearby places instantly.
 
-## Available Scripts
+![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)
+![Leaflet](https://img.shields.io/badge/Leaflet.js-1.9-199900?style=flat-square&logo=leaflet)
+![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-Overpass_API-7EBC6F?style=flat-square&logo=openstreetmap)
+![License](https://img.shields.io/badge/License-MIT-blue?style=flat-square)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🎥 Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![App Screenshot](./screenshots/demo.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> Pick a mood → Allow location → See real nearby places on an interactive map
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## ✨ Features
 
-### `npm run build`
+### 🎭 Mood-Based Search
+| Mood | Places Found |
+|------|-------------|
+| 💻 Work Mode | Cafés, Libraries, Coworking spaces |
+| 🌹 Date Night | Restaurants, Bars, Lounges |
+| ⚡ Quick Bite | Fast Food, Food Courts |
+| 💸 Budget Hunt | Cheap Eats, Bakeries |
+| 🧭 New in Town | All City Essentials |
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🗺️ Map & Navigation
+- Interactive Leaflet map with custom numbered markers
+- Route line drawn between your location and selected place
+- One-click **Open in Google Maps** for walking/driving directions
+- Auto-fit map bounds to show all results
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 📋 New in Town Mode
+- **City Essentials Checklist** — Hospital, Pharmacy, Police, ATM, Grocery, Transit, Post Office, Restaurant
+- Tick off each essential as you find it with a progress bar
+- **Keyword Search** — type anything like "SBI ATM" or "Apollo Hospital"
+- Quick search suggestions built in
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### ⭐ Favourites & History
+- Save any place to favourites — persisted in localStorage
+- Recently visited history auto-recorded
+- Stats Dashboard — total searches, mood breakdown, cities visited
 
-### `npm run eject`
+### 🔍 Smart Search
+- **City Search** — search any city worldwide, not just current location
+- **Auto-widen radius** — if no results found, automatically retries at 5km then 10km
+- Filter by **Open Now**, sort by **Nearest** or **Top Rated**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 🎨 UI/UX
+- 🌙 Dark / ☀️ Light mode toggle — preference saved
+- 📤 Share any place via WhatsApp or copy to clipboard
+- 📍 Custom emoji favicon
+- Fully responsive — works on mobile and desktop
+- Local language place names shown when available (Hindi, Tamil, Telugu)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🛠️ Tech Stack
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+| Category | Technology |
+|----------|-----------|
+| **Frontend** | React 18, JavaScript ES6+ |
+| **Map** | Leaflet.js, React-Leaflet |
+| **Map Tiles** | OpenStreetMap |
+| **Places Data** | Overpass API (OpenStreetMap) |
+| **Geocoding** | Nominatim API |
+| **HTTP Client** | Axios |
+| **Location** | Browser Geolocation API |
+| **Storage** | localStorage |
+| **Fonts** | Syne, DM Sans (Google Fonts) |
 
-## Learn More
+> 💡 **Zero API cost** — All APIs used are completely free with no key required.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## 📁 Project Structure
 
-### Code Splitting
+```
+nearby-recommender/
+│
+├── public/
+│   ├── index.html
+│   └── manifest.json
+│
+├── src/
+│   ├── App.js                      # Main app — screens & state management
+│   ├── App.css                     # Global styles with dark/light theme
+│   ├── index.js                    # React entry point
+│   ├── index.css                   # Base reset
+│   │
+│   ├── components/
+│   │   ├── MoodSelector.js/css     # Home screen mood cards
+│   │   ├── MapView.js/css          # Leaflet map with markers & routes
+│   │   ├── PlaceCard.js/css        # Place card with fav/share/route actions
+│   │   ├── SearchBar.js/css        # Keyword search with suggestions
+│   │   ├── EssentialsChecklist.js/css  # New in Town checklist
+│   │   ├── CitySearch.js/css       # Search any city via Nominatim
+│   │   ├── FavouritesPanel.js/css  # Saved places panel
+│   │   └── StatsDashboard.js/css   # Usage stats & history
+│   │
+│   ├── services/
+│   │   └── placesAPI.js            # All Overpass & Nominatim API calls
+│   │
+│   └── utils/
+│       ├── filters.js              # Haversine distance, sort, star rating
+│       └── storage.js              # localStorage helpers for favs/stats
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🚀 Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Prerequisites
+- Node.js 16+
+- npm or yarn
 
-### Making a Progressive Web App
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```bash
+# Clone the repo
+git clone https://github.com/YOUR_USERNAME/nearby-vibes.git
 
-### Advanced Configuration
+# Navigate into project
+cd nearby-vibes/nearby-recommender
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+# Install dependencies
+npm install
 
-### Deployment
+# Start development server
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-### `npm run build` fails to minify
+### Build for Production
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm run build
+```
+
+---
+
+## 🌐 How It Works
+
+```
+User picks a Mood
+       ↓
+Browser Geolocation API → GPS coordinates
+       ↓
+Overpass API query built dynamically
+e.g. node["amenity"="cafe"](around:1500, lat, lon)
+       ↓
+Raw OpenStreetMap nodes returned
+       ↓
+Client-side mapping:
+  name · type · distance (Haversine) · rating · open status
+       ↓
+Leaflet map renders with custom markers
+       +
+Sidebar list with filter / sort
+       +
+Detail panel on click
+```
+
+---
+
+## 📸 Screenshots
+
+| Home Screen | Map View | New in Town |
+|-------------|----------|-------------|
+| ![Home](./screenshots/home.png) | ![Map](./screenshots/map.png) | ![Checklist](./screenshots/checklist.png) |
+
+| Dark Mode | Stats Dashboard | Favourites |
+|-----------|----------------|------------|
+| ![Dark](./screenshots/dark.png) | ![Stats](./screenshots/stats.png) | ![Favs](./screenshots/favs.png) |
+
+---
+
+## 🔧 Key Implementation Details
+
+### Haversine Formula
+Used to calculate real-world distance between two GPS coordinates client-side:
+```js
+function haversine(lat1, lon1, lat2, lon2) {
+  const R = 6371e3;
+  const toR = d => d * Math.PI / 180;
+  const dLat = toR(lat2 - lat1), dLon = toR(lon2 - lon1);
+  const a = Math.sin(dLat/2)**2 +
+            Math.cos(toR(lat1)) * Math.cos(toR(lat2)) * Math.sin(dLon/2)**2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+}
+```
+
+### Dynamic Overpass Query
+Mood-based queries are built dynamically:
+```js
+const query = `
+  [out:json][timeout:15];
+  (
+    node["amenity"="cafe"](around:${radius},${lat},${lon});
+    node["amenity"="library"](around:${radius},${lat},${lon});
+  );
+  out body 40;
+`;
+```
+
+### Auto-Widen Radius
+If no results found, automatically retries with larger radius:
+```js
+let results = await fetchPlaces(lat, lon, mood, 1500);
+if (results.length === 0) results = await fetchPlaces(lat, lon, mood, 5000);
+if (results.length === 0) results = await fetchPlaces(lat, lon, mood, 10000);
+```
+
+---
+
+## 🗺️ APIs Used
+
+| API | Purpose | Cost |
+|-----|---------|------|
+| [Overpass API](https://overpass-api.de) | Fetch real POI data from OpenStreetMap | Free |
+| [Nominatim](https://nominatim.openstreetmap.org) | City geocoding & reverse geocoding | Free |
+| [OpenStreetMap Tiles](https://www.openstreetmap.org) | Map tile rendering | Free |
+| Browser Geolocation API | User GPS coordinates | Built-in |
+
+---
+
+## 📝 Resume Line
+
+> *Built a location-based recommendation app using React, Leaflet.js and OpenStreetMap's Overpass API. Features mood-based place discovery, real-time GPS, interactive maps with custom markers, dynamic filtering, keyword search, favourites, stats dashboard and a city essentials checklist — zero API cost.*
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome! For major changes, please open an issue first.
+
+---
+
+## 📄 License
+
+MIT © 2026 — [ankitnegi-dev](https://github.com/ankitnegi-dev)
+
+---
+
+<p align="center">Built with ❤️ using React & OpenStreetMap</p>

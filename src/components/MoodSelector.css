@@ -1,0 +1,40 @@
+.mood-screen{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px;background:#0D0D0F;transition:background 0.3s;}
+.mood-screen.light{background:#F4F4FC;}
+.mood-topbar{width:100%;max-width:480px;display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;}
+.mood-topbar-left{display:flex;gap:8px;}
+.icon-btn{background:#16161A;border:1px solid #2A2A35;color:#F2F2F4;padding:7px 12px;border-radius:10px;cursor:pointer;font-size:15px;position:relative;transition:all 0.15s;}
+.mood-screen.light .icon-btn{background:#FFFFFF;border-color:#D0D0E8;color:#18181B;}
+.icon-btn:hover{border-color:#7C6AF7;}
+.badge{position:absolute;top:-5px;right:-5px;background:#F25882;color:white;font-size:9px;font-weight:800;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center;}
+.hero-title{font-family:'Syne',sans-serif;font-size:clamp(38px,8vw,64px);font-weight:800;line-height:1.05;letter-spacing:-2px;text-align:center;background:linear-gradient(135deg,#fff 30%,#7C6AF7 70%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.mood-screen.light .hero-title{background:linear-gradient(135deg,#18181B 30%,#7C6AF7 70%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+.hero-sub{font-size:16px;color:#7A7A8C;text-align:center;margin-top:10px;}
+.radius-wrap{width:100%;max-width:480px;background:#16161A;border:1px solid #2A2A35;border-radius:16px;padding:16px 20px;margin:28px 0 20px;}
+.mood-screen.light .radius-wrap{background:#FFFFFF;border-color:#D0D0E8;}
+.radius-row{display:flex;justify-content:space-between;margin-bottom:10px;}
+.radius-row span:first-child{font-size:13px;color:#7A7A8C;text-transform:uppercase;letter-spacing:1px;}
+.radius-val{font-family:'Syne',sans-serif;font-weight:700;font-size:18px;color:#7C6AF7;}
+input[type=range]{-webkit-appearance:none;width:100%;height:4px;background:#2A2A35;border-radius:4px;}
+.mood-screen.light input[type=range]{background:#D0D0E8;}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;border-radius:50%;background:#7C6AF7;cursor:pointer;border:3px solid #0D0D0F;}
+.mood-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;width:100%;max-width:480px;}
+.mood-card{background:#16161A;border:1.5px solid #2A2A35;border-radius:20px;padding:24px 16px;cursor:pointer;text-align:center;transition:all 0.22s;}
+.mood-screen.light .mood-card{background:#FFFFFF;border-color:#D0D0E8;}
+.mood-card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 8px 32px color-mix(in srgb,var(--accent) 20%,transparent);}
+.mood-emoji{font-size:38px;margin-bottom:10px;display:block;}
+.mood-title{font-family:'Syne',sans-serif;font-weight:700;font-size:17px;color:#F2F2F4;}
+.mood-screen.light .mood-title{color:#18181B;}
+.mood-desc{font-size:12px;color:#7A7A8C;margin-top:5px;}
+.mood-pill{display:inline-block;margin-top:12px;font-size:11px;font-weight:600;padding:4px 12px;border-radius:20px;background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent);}
+.newtown-card{width:100%;max-width:480px;margin-top:14px;background:linear-gradient(135deg,#0a1a2e,#0d1f35);border:1.5px solid #00C2FF44;border-radius:20px;padding:20px 20px 16px;cursor:pointer;transition:all 0.22s;position:relative;overflow:hidden;}
+.mood-screen.light .newtown-card{background:linear-gradient(135deg,#E8F4FF,#EEF0FF);}
+.newtown-card:hover{transform:translateY(-3px);border-color:#00C2FF88;box-shadow:0 8px 32px #00C2FF22;}
+.newtown-left{display:flex;align-items:center;gap:14px;}
+.newtown-badge{background:#00C2FF;color:#0D0D0F;font-family:'Syne',sans-serif;font-weight:800;font-size:10px;padding:3px 8px;border-radius:6px;position:absolute;top:14px;right:44px;letter-spacing:1px;}
+.newtown-emoji{font-size:36px;flex-shrink:0;}
+.newtown-title{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:#F2F2F4;}
+.mood-screen.light .newtown-title{color:#18181B;}
+.newtown-desc{font-size:12px;color:#7A7A8C;margin-top:4px;line-height:1.5;}
+.newtown-features{display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;}
+.newtown-features span{font-size:11px;font-weight:600;background:#00C2FF15;color:#00C2FF;padding:4px 10px;border-radius:20px;border:1px solid #00C2FF33;}
+.newtown-arrow{position:absolute;right:20px;top:50%;transform:translateY(-50%);font-size:20px;color:#00C2FF;}
