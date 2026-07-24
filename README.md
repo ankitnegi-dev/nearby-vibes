@@ -2,6 +2,8 @@
 
 > A location-based place recommendation app built with React, Leaflet.js and OpenStreetMap's Overpass API. Pick a mood → get real nearby places instantly.
 
+**Live Demo:** [https://nearby-vibes.vercel.app/](https://nearby-vibes.vercel.app)
+
 ![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react)
 ![Leaflet](https://img.shields.io/badge/Leaflet.js-1.9-199900?style=flat-square&logo=leaflet)
 ![OpenStreetMap](https://img.shields.io/badge/OpenStreetMap-Overpass_API-7EBC6F?style=flat-square&logo=openstreetmap)
