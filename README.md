@@ -1,4 +1,4 @@
-# 📍 Nearby Vibes — Smart Place Recommender
+# 📍 Nearby Vibes - Smart Place Recommender
 
 > A location-based place recommendation app built with React, Leaflet.js and OpenStreetMap's Overpass API. Pick a mood → get real nearby places instantly.
 
@@ -11,15 +11,16 @@
 
 ## 🎥 Demo
 
-![App Screenshot](./screenshots/home.png)
+![App Screenshot](./screenshots/demo.png)
+
 
 > Pick a mood → Allow location → See real nearby places on an interactive map
 
 ---
 
-## ✨ Features
+## Features
 
-### 🎭 Mood-Based Search
+### Mood-Based Search
 | Mood | Places Found |
 |------|-------------|
 | 💻 Work Mode | Cafés, Libraries, Coworking spaces |
@@ -28,38 +29,38 @@
 | 💸 Budget Hunt | Cheap Eats, Bakeries |
 | 🧭 New in Town | All City Essentials |
 
-### 🗺️ Map & Navigation
+### Map & Navigation
 - Interactive Leaflet map with custom numbered markers
 - Route line drawn between your location and selected place
 - One-click **Open in Google Maps** for walking/driving directions
 - Auto-fit map bounds to show all results
 
-### 📋 New in Town Mode
-- **City Essentials Checklist** — Hospital, Pharmacy, Police, ATM, Grocery, Transit, Post Office, Restaurant
+### New in Town Mode
+- **City Essentials Checklist** - Hospital, Pharmacy, Police, ATM, Grocery, Transit, Post Office, Restaurant
 - Tick off each essential as you find it with a progress bar
-- **Keyword Search** — type anything like "SBI ATM" or "Apollo Hospital"
+- **Keyword Search** - type anything like "SBI ATM" or "Apollo Hospital"
 - Quick search suggestions built in
 
-### ⭐ Favourites & History
-- Save any place to favourites — persisted in localStorage
+### Favourites & History
+- Save any place to favourites - persisted in localStorage
 - Recently visited history auto-recorded
-- Stats Dashboard — total searches, mood breakdown, cities visited
+- Stats Dashboard - total searches, mood breakdown, cities visited
 
-### 🔍 Smart Search
-- **City Search** — search any city worldwide, not just current location
-- **Auto-widen radius** — if no results found, automatically retries at 5km then 10km
+### Smart Search
+- **City Search** - search any city worldwide, not just current location
+- **Auto-widen radius** - if no results found, automatically retries at 5km then 10km
 - Filter by **Open Now**, sort by **Nearest** or **Top Rated**
 
-### 🎨 UI/UX
-- 🌙 Dark / ☀️ Light mode toggle — preference saved
+### UI/UX
+- 🌙 Dark / ☀️ Light mode toggle - preference saved
 - 📤 Share any place via WhatsApp or copy to clipboard
 - 📍 Custom emoji favicon
-- Fully responsive — works on mobile and desktop
+- Fully responsive - works on mobile and desktop
 - Local language place names shown when available (Hindi, Tamil, Telugu)
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Category | Technology |
 |----------|-----------|
@@ -73,11 +74,11 @@
 | **Storage** | localStorage |
 | **Fonts** | Syne, DM Sans (Google Fonts) |
 
-> 💡 **Zero API cost** — All APIs used are completely free with no key required.
+> 💡 **Zero API cost** - All APIs used are completely free with no key required.
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 nearby-recommender/
@@ -87,7 +88,7 @@ nearby-recommender/
 │   └── manifest.json
 │
 ├── src/
-│   ├── App.js                      # Main app — screens & state management
+│   ├── App.js                      # Main app - screens & state management
 │   ├── App.css                     # Global styles with dark/light theme
 │   ├── index.js                    # React entry point
 │   ├── index.css                   # Base reset
@@ -112,7 +113,7 @@ nearby-recommender/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 16+
@@ -168,7 +169,7 @@ Detail panel on click
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 | Home Screen | Map View | New in Town |
 |-------------|----------|-------------|
@@ -180,7 +181,7 @@ Detail panel on click
 
 ---
 
-## 🔧 Key Implementation Details
+## Key Implementation Details
 
 ### Haversine Formula
 Used to calculate real-world distance between two GPS coordinates client-side:
@@ -218,7 +219,7 @@ if (results.length === 0) results = await fetchPlaces(lat, lon, mood, 10000);
 
 ---
 
-## 🗺️ APIs Used
+## APIs Used
 
 | API | Purpose | Cost |
 |-----|---------|------|
@@ -229,21 +230,20 @@ if (results.length === 0) results = await fetchPlaces(lat, lon, mood, 10000);
 
 ---
 
-## 📝 Resume Line
-
-> *Built a location-based recommendation app using React, Leaflet.js and OpenStreetMap's Overpass API. Features mood-based place discovery, real-time GPS, interactive maps with custom markers, dynamic filtering, keyword search, favourites, stats dashboard and a city essentials checklist — zero API cost.*
-
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Pull requests are welcome! For major changes, please open an issue first.
 
 ---
 
-## 📄 License
+## License
+MIT - feel free to use this as inspiration for your own portfolio. If you do, a star would be appreciated!
 
-MIT © 2026 — [ankitnegi-dev](https://github.com/ankitnegi-dev)
+---
+
+Built by [Ankit Negi](https://github.com/ankitnegi-dev) - CS undergraduate at IIITDM Kancheepuram
 
 ---
 
