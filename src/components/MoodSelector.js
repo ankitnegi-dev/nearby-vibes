@@ -14,7 +14,7 @@ export default function MoodSelector({onSelect,radius,setRadius,theme,toggleThem
         <button className="icon-btn theme-btn" onClick={toggleTheme}>{theme==='dark'?'🌙':'☀️'}</button>
       </div>
       <h1 className="hero-title">Find your<br/>next spot.</h1>
-      <p className="hero-sub">Pick a vibe — we'll find real places near you</p>
+      <p className="hero-sub">Pick a vibe - we'll find real places near you</p>
       <div className="radius-wrap">
         <div className="radius-row"><span>Search Radius</span><span className="radius-val">{(radius/1000).toFixed(1)} km</span></div>
         <input type="range" min={500} max={5000} step={250} value={radius} onChange={e=>setRadius(+e.target.value)}/>

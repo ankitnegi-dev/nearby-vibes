@@ -27,7 +27,7 @@ export default function PlaceCard({ place, index, mood, selected, onClick, onRou
     // Mobile native share
     navigator.share({ title: place.name, text, url: mapsUrl });
   } else {
-    // Desktop — copy to clipboard AND open WhatsApp in new tab
+    // Desktop - copy to clipboard AND open WhatsApp in new tab
     navigator.clipboard.writeText(text).then(() => {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);

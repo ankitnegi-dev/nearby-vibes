@@ -10,7 +10,7 @@ export default function SearchBar({onSearch,loading,color='#00C2FF',theme}){
     <div className={`searchbar-wrap ${theme}`}>
       <form onSubmit={submit} className="search-form">
         <span className="search-icon">🔍</span>
-        <input className="search-input" type="text" placeholder='Search — "ATM", "Hospital", "Bus Stop"…'
+        <input className="search-input" type="text" placeholder='Search - "ATM", "Hospital", "Bus Stop"…'
           value={query} onChange={e=>setQuery(e.target.value)}
           onFocus={()=>setFocused(true)} onBlur={()=>setTimeout(()=>setFocused(false),150)}/>
         {query&&<button type="button" className="clear-btn" onClick={()=>setQuery('')}>✕</button>}

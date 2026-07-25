@@ -94,7 +94,7 @@ export default function App() {
         addHistory({ moodId: id, city, count: results.length });
 
       } catch {
-        setError('Could not fetch places. Overpass API may be busy — please try again.');
+        setError('Could not fetch places. Overpass API may be busy - please try again.');
         setStep('error');
       }
     };
@@ -116,7 +116,7 @@ export default function App() {
   const handleCitySelect = (city) => {
     setUserPos({ lat: city.lat, lon: city.lon });
     setCityName(city.name);
-    // Show mood selector prompt — user still picks mood
+    // Show mood selector prompt - user still picks mood
     // Just update position, they pick mood next
     alert(`📍 Location set to ${city.name}! Now pick a mood to search.`);
   };
